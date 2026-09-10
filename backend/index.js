@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with MongoDB
-// mongoose.connect("mongodb+srv://ajitu5414_db_user:7c5NDYYY4VcL7R5J@cluster0.kzdedli.mongodb.net/e-commerce");
+
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
